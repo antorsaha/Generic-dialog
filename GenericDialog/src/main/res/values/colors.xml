@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="dialog_background">#F3F3F3</color>
+    <color name="g_title_txt">#ffff</color>
+    <color name="g_title_txt_bg">#673AB7</color>
+    <color name="g_body_text">#000</color>
+    <color name="g_positive_btn_txt">#fff</color>
+    <color name="g_positive_btn_bg">#673AB7</color>
+    <color name="g_negative_btn_txt">#673AB7</color>
+    <color name="g_negative_btn_bg">#673AB7</color>
+</resources>
