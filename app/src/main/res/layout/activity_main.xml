@@ -34,6 +34,12 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
         android:text="icon dialog"/>
+    <Button
+        android:id="@+id/loadingDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:text="loading dialog"/>
 
 
 </LinearLayout>

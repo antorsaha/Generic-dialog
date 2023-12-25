@@ -20,22 +20,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.textDialog.setOnClickListener(this)
         binding.titleBarText.setOnClickListener(this)
         binding.iconDialog.setOnClickListener(this)
+        binding.loadingDialog.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         if (v == binding.textDialog){
             val dialog = GenericDialog.builder(this)
             dialog.setBodyText("Test text")
-            //dialog.setTitleText("Test Dialog")
-            //getDrawable(R.drawable.ic_launcher_background)?.let { dialog.setImageDrawable(it) }
-
-            /*dialog.setPositiveButton("OK"){
-                Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show()
-            }
-
-            dialog.setNegativeButton("Cancel"){
-                Toast.makeText(this, "cancel", Toast.LENGTH_SHORT).show()
-            }*/
             dialog.build().showDialog()
         }else if (v == binding.titleBarText){
             val dialog = GenericDialog.builder(this)
@@ -77,6 +68,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             getDrawable(R.drawable.ic_launcher_background)?.let { dialog.setImageDrawable(it) }
             //dialog.setCancelable(false)
             dialog.build().showDialog()
+        }else if (v == binding.loadingDialog){
+            val loadingDialog = GenericDialog.getLoadingDialog(this)
+            loadingDialog.setCancelable(true)
+            loadingDialog.show()
+
         }
     }
 }

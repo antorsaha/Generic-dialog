@@ -32,9 +32,7 @@ class GenericDialog private constructor(val context: Context) {
 
 
     fun showDialog() {
-
         val acc = context as Activity
-
         if (dialog != null && !acc.isFinishing && !acc.isDestroyed) {
             if (dialog!!.isShowing) {
                 hideDialog()
@@ -257,10 +255,13 @@ class GenericDialog private constructor(val context: Context) {
     }
 
     companion object {
-        fun builder(context: Context): Builder {
-            return GenericDialog(context).Builder(context)
+        fun builder(activity: Activity): Builder {
+            return GenericDialog(activity).Builder(activity)
         }
 
+        fun getLoadingDialog(activity: Activity): LoadingDialog{
+            return LoadingDialog(activity)
+        }
 
     }
 }
