@@ -27,6 +27,7 @@ class GenericDialog private constructor(val context: Context) {
         binding.tvDialogBodyText.visibility = View.GONE
         binding.btnNegative.visibility = View.GONE
         binding.btnPositive.visibility = View.GONE
+        binding.llButtons.visibility = View.GONE
 
     }
 
@@ -89,6 +90,7 @@ class GenericDialog private constructor(val context: Context) {
     private fun setPositiveButton(positiveButtonText: String, onPositiveButtonClick: (() -> Unit)?){
         binding.btnPositive.text = positiveButtonText
         binding.btnPositive.visibility = View.VISIBLE
+        binding.llButtons.visibility = View.VISIBLE
 
         binding.btnPositive.setOnClickListener{
             onPositiveButtonClick?.invoke()
@@ -102,8 +104,9 @@ class GenericDialog private constructor(val context: Context) {
     }
 
     private fun setNegativeButton(negativeButtonText: String, onNegativeButtonClick: (() -> Unit)?){
-        binding.btnNegative.text = negativeButtonText;
-        binding.btnNegative.visibility = View.VISIBLE;
+        binding.btnNegative.text = negativeButtonText
+        binding.btnNegative.visibility = View.VISIBLE
+        binding.llButtons.visibility = View.VISIBLE
 
         binding.btnNegative.setOnClickListener{
             onNegativeButtonClick?.invoke()
